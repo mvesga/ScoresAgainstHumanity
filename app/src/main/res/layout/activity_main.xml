@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    tools:context="com.mvesga.scoresagainsthumanity.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="sans-serif"
+            android:gravity="end"
+            android:paddingBottom="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="Unofficial scorekeeping\nfan App 4x players"
+            android:textAlignment="textEnd"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0"
+                android:fontFamily="sans-serif"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp"
+                android:text="Scores\nAgainst\nhumanity"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textStyle="bold" />
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="8dp"-->
+            <!--android:layout_weight="0"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<EditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="8dp"-->
+            <!--android:layout_marginRight="8dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:hint="New player name"-->
+            <!--android:textColor="#FFFFFF"-->
+            <!--android:textColorHint="#BDBDBD" />-->
+
+            <!--<Button-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="0"-->
+            <!--android:background="@color/colorAccent"-->
+            <!--android:backgroundTint="#424242"-->
+            <!--android:text="Add"-->
+            <!--android:textColor="#FFFFFF" />-->
+
+            <!--</LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-medium"
+                        android:hint="Horrible person #1 "
+                        android:padding="8dp"
+                        android:textColor="#616161"
+                        android:textColorHint="#BDBDBD"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/addOne"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0"
+                        android:onClick="addOne"
+                        android:text="+1" />
+
+                    <TextView
+                        android:id="@+id/team_a_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="0"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center_horizontal"
+                        android:padding="0dp"
+                        android:text="0"
+                        android:textColor="#FFFFFF"
+                        android:textSize="36sp" />
+
+                    <Button
+                        android:id="@+id/substractOneA"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0"
+                        android:onClick="substractOneA"
+                        android:text="-1" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@android:color/darker_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="0dp">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-medium"
+                        android:hint="Horrible person #2 "
+                        android:padding="8dp"
+                        android:textColor="#616161"
+                        android:textColorHint="#BDBDBD"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/addOne2B"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0"
+                        android:onClick="addOne2B"
+                        android:text="+1" />
+
+                    <TextView
+                        android:id="@+id/team_b_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="0"
+                        android:fontFamily="sans-serif-light"
+                        android:padding="0dp"
+                        android:text="0"
+                        android:textColor="#FFFFFF"
+                        android:textSize="36sp" />
+
+                    <Button
+                        android:id="@+id/substractOneB"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0"
+                        android:onClick="substractOneB"
+                        android:text="-1" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@android:color/darker_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="0dp">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-medium"
+                        android:hint="Horrible person #3 "
+                        android:padding="8dp"
+                        android:textColor="#616161"
+                        android:textColorHint="#BDBDBD"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/addOne2C"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0"
+                        android:onClick="addOne2C"
+                        android:text="+1" />
+
+                    <TextView
+                        android:id="@+id/team_c_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="0"
+                        android:fontFamily="sans-serif-light"
+                        android:padding="0dp"
+                        android:text="0"
+                        android:textColor="#FFFFFF"
+                        android:textSize="36sp" />
+
+                    <Button
+                        android:id="@+id/addTwo2C"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0"
+                        android:onClick="substractOneC"
+                        android:text="-1" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@android:color/darker_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="0dp">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-medium"
+                        android:hint="Horrible person #4 "
+                        android:padding="8dp"
+                        android:textColor="#616161"
+                        android:textColorHint="#BDBDBD"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/addOne2D"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0"
+                        android:onClick="addOne2D"
+                        android:text="+1" />
+
+                    <TextView
+                        android:id="@+id/team_d_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="0"
+                        android:fontFamily="sans-serif-light"
+                        android:padding="0dp"
+                        android:text="0"
+                        android:textColor="#FFFFFF"
+                        android:textSize="36sp" />
+
+                    <Button
+                        android:id="@+id/substractOneD"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="8dp"
+                        android:layout_weight="0"
+                        android:onClick="substractOneD"
+                        android:text="-1" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:color/darker_gray" />
+
+            <Button
+                android:id="@+id/reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="32dp"
+                android:layout_weight="0"
+                android:background="#414141"
+                android:onClick="reset"
+                android:text="Reset"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="sans-serif"
+                android:gravity="end"
+                android:paddingBottom="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="Compatible with Cards Against Humanity\nAny resemblance to it is merely a coincidence!"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:autoLink="web"
+                android:fontFamily="sans-serif"
+                android:gravity="end"
+                android:paddingBottom="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="@string/creativecommons"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
